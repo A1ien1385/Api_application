@@ -24,7 +24,7 @@ class App extends Component {
         })
       )
       .catch((err) => {
-        this.setState({ text: "Error!" });
+        this.setState({ text: "Set new date." });
       });
   };
 
