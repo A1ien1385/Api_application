@@ -3,7 +3,7 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    text: "bla",
+    text: "Set new date",
     error: "",
   };
 
@@ -11,7 +11,18 @@ class App extends Component {
     const value = this.refs.number.value;
 
     fetch(`http://numbersapi.com/${value}/year?json`)
-      .then((res) => console.log(res))
+      .then((res) => {
+        if (res.ok) {
+          return res;
+        }
+        throw Error(res.status);
+      })
+      .then((res) => res.json())
+      .then((data) =>
+        this.setState({
+          text: data.text,
+        })
+      )
       .catch((err) => console.log(err));
   };
 
