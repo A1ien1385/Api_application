@@ -1,3 +1,9 @@
+Prosta aplikacja wykorzystująca React, Fetch i NumbersApi.
+Po wpisaniu daty pokazuje użytkownikowi co wydarzyło się w danym roku.
+
+Simple app used React, Fetch and NumbersApi.
+After set date app show user what happened in that year.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

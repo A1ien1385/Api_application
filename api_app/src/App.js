@@ -23,7 +23,9 @@ class App extends Component {
           text: data.text,
         })
       )
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        this.setState({ text: "Error!" });
+      });
   };
 
   render() {
